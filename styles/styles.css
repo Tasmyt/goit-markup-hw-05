@@ -91,10 +91,9 @@ img {
 .button-activ:hover,
 .button-activ:focus {
   background-color: var(--color-activ-button);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
   color: var(--color-background);
-  cursor: pointer;
+  
 }
 
 .link:hover,
@@ -117,7 +116,9 @@ img {
   color: var(--color-activ);
   border: 1px solid var(--color-activ);
 }
-.link-project:hover {
+.link-project:hover,
+ .link-project:focus {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /* header */
@@ -192,7 +193,7 @@ img {
 }
 .footer{
   display: flex;
-  
+  align-items: baseline;
 }
 
 .list-footer>li:not(:last-child) {
@@ -236,7 +237,7 @@ img {
   margin-left: 70px;
 }
 .social-footer-box h2 {
-  margin: 12px 0 20px 0;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -358,6 +359,35 @@ background-color: var(--color-background-section);
   text-align: center;
   
 }
+
+.wrapper {
+position: relative;
+}
+.wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background-color: var(--color-bg-dark);
+  opacity: 0.8;
+}
+.wrapper h3 {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--color-background);  
+  
+} 
+
 .team-title {
   padding-bottom: 94px;
   padding-top: 94px;
@@ -375,7 +405,7 @@ background-color: var(--color-background-section);
 }
 
 .team {
-  margin: 0;  
+  margin: 0 0 16px;  
   font-weight: 400;
   color: var(--color-minor);
   
@@ -388,12 +418,11 @@ background-color: var(--color-background-section);
   border-radius: 0px 0px 4px 4px;
 }
 .team-box {
-  padding: 30px 0 15px 0;
+  padding: 30px 32px;
 }
 
 .list-team {
 display: flex;
-padding: 0 32px 30px 32px;
 justify-content: space-between;
 }
 
@@ -437,7 +466,7 @@ justify-content: space-between;
   text-align: center;  
   font-family: inherit;
   border: none;
-  
+  cursor: pointer;
 }
 .list-navigation {
   display: flex;
